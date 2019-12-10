@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+           <input type="radio" value="daoj" name="star" v-model="name" /> 刀剑
+           <input type="radio" value="guwang" name="star" v-model="name" /> 骨王
+           <input type="radio" value="shi" name="star" v-model="name" /> 千空
+           <img v-if="name=='daoj'" style="width:200px;height:150px;" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3969230544,93497047&fm=26&gp=0.jpg"/>
+           <img v-else-if="name=='guwang'" style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977968645&di=a5642b0904485b2d6c73de8e44677229&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190306%2F63ee7f7cc6874df99ff6ed43d9c10ee8.jpeg"/>
+           <img v-else-if="name=='shi'" style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576572727&di=f4be84bc2249d8f9b93554fad26d1aea&imgtype=jpg&er=1&src=http%3A%2F%2Fv.114la.com%2Fimg%2F2019%2F07%2F06%2Fqq%2Fcomic%2F9%2F63t2x1s5fR7.jpg"/>
+           <img v-else style="width:200px;height:150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575978047161&di=483abb2b04852db61d1911de29515802&imgtype=0&src=http%3A%2F%2Fpicture.youth.cn%2Fqtdb%2F201710%2FW020171026282234949975.jpg"/>
+             </div>
+            <script>
+                var app=new Vue({
+                    el:"#app",
+                    data:{
+                         show:'false',
+                         name:""
+                    }
+                });
+            </script>
+</body>
+</html>
